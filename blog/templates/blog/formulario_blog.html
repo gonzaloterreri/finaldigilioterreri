@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Blog </title>
+    <title>Crea tu post </title>
 </head>
 <body>
-    <form action="" method="post">
-        {% csrf_token %}
-
-        {{form.as_p}}
-
-        <input type="submit" value="Guardar Post">
+    
+<form action="" method="POST" style="text-align: center;">
+    {% csrf_token %}
+    <table style="color: white; margin: 20px auto;">{{form.as_table}}</table>
+    <input type="submit" value="Guardar" style="width: 150px;">
     </form>
 </body>
-</html>
+{% endblock %}
