@@ -12,7 +12,7 @@
 </head>
 <body>
     
-<form action="" method="POST" style="text-align: center;">
+<form action="" method="POST" style="text-align: center;" enctype="multipart/form-data">
     {% csrf_token %}
     <table style="color: white; margin: 20px auto;">{{form.as_table}}</table>
     <input type="submit" value="Guardar" style="width: 150px;">

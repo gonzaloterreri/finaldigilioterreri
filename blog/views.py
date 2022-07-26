@@ -23,7 +23,7 @@ def crear_post(request):
             
             info = formulario.cleaned_data
             
-            post = Post(titulo=info["titulo"],contenido=info["contenido"],imagen=info["imagen"],autor=info["autor"])
+            post = Post(titulo=info["titulo"],contenido=info["contenido"],imagen=info["imagen"])
             post.save()
             return redirect("Blog")
         return render(request,"blog/formulario_blog.html",{'form': formulario})
