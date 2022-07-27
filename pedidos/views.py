@@ -59,8 +59,8 @@ def enviar_mail(**kwargs):
         })
 
     mensaje_texto=strip_tags(mensaje)
-    from_email="cursos@pildorasinformaticas.es"
-    #to=kwargs.get("email_usuario")
-    to="aquí la dirección del destinatario"
+    from_email="cosmefulananitoweb499@hotmail.com"
+    to=kwargs.get("email_usuario")
+    to="cosmefulananitoweb499@hotmail.com"
     send_mail(asunto,mensaje_texto,from_email,[to], html_message=mensaje)
     
