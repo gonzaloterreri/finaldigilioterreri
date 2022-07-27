@@ -37,7 +37,7 @@ def procesar_pedido(request):
         pedido=pedido,
         lineas_pedido=lineas_pedido,
         nombreusuario=request.user.username,
-        email_usuario=request.user.email
+        
         
 
     )
@@ -45,9 +45,7 @@ def procesar_pedido(request):
     messages.success(request, "El pedido se ha creado correctamente")
     
     return redirect('../tienda')
-    #return redirect('listado_productos')
-    #return render(request, "tienda/tienda.html",{"productos":productos})
-    
+
 
 def enviar_mail(**kwargs):
     asunto="Gracias por el pedido"
@@ -59,8 +57,8 @@ def enviar_mail(**kwargs):
         })
 
     mensaje_texto=strip_tags(mensaje)
-    from_email="cosmefulananitoweb499@hotmail.com"
-    to=kwargs.get("email_usuario")
-    to="cosmefulananitoweb499@hotmail.com"
+    from_email="cosmefulanitoweb499@hotmail.com"
+    #to=kwargs.get("email_usuario")
+    to="cosmefulanitoweb499@hotmail.com"
     send_mail(asunto,mensaje_texto,from_email,[to], html_message=mensaje)
     
