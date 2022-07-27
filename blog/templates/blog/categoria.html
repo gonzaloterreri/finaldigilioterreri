@@ -10,7 +10,11 @@
     <section class="page-section clearfix">
         <div class="container">
           <div class="intro">
+            {%if post.imagen %}
             <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.imagen.url}}" alt="" style="width: 50%;">
+            {% else %}
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'ProyectoWebApp/img/sin_imagen.jpg' %}" alt="" style="width: 50%;">
+            {%endif%}
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
               <h2 class="section-heading mb-4" >
                 <span class="section-heading-lower">{{post.titulo}}</span>
