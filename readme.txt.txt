@@ -1,4 +1,26 @@
 
+
+
+```shell
+python -m pip install python
+```
+
+```shell
+python -m pip install django
+```
+
+```shell
+python -m pip install bootstrap5
+```
+
+```shell
+python -m pip install crispyforms
+```
+
+```shell
+python -m pip install pillow
+```
+
 La configuracion de email, tanto para la tienda y para contactos se debe hacer en :
 ProyectoWeb\settings.py 
 linea # configuración de email
